@@ -1,0 +1,19 @@
+{
+  "name": "bookshelf-demo",
+  "version": "0.0.1",
+  "description": "hapi-bookshelf-model demo",
+  "main": "server.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "robertd",
+  "license": "MIT",
+  "dependencies": {
+    "bookshelf": "^0.7.9",
+    "hapi": "^8.2.0",
+    "hapi-bookshelf-models": "^1.2.1",
+    "hapi-route-auto-reg": "^1.0.4",
+    "knex": "^0.7.3",
+    "sqlite3": "^3.0.5"
+  }
+}
