@@ -11,10 +11,10 @@ server.connection({
 
 server.register([
   {
-  	register: require('hapi-route-auto-reg'),
-  	options: {
-  		directory: __dirname + '/routes'
-  	}
+    register: require('hapi-route-auto-reg'),
+    options: {
+      directory: __dirname + '/routes'
+    }
   },
   {
     register: require('hapi-bookshelf-models'),
