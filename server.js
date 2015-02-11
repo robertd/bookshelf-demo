@@ -2,16 +2,12 @@
 
 var Hapi = require('hapi');
 var server = new Hapi.Server();
+var knexfile = require('./knexfile.js');
 
 server.connection({
   host: 'localhost',
   port: 8000
 });
-var knexfile = require('./knexfile.js');
-
-var knex = require('knex')(knexfile['development']);
-var bookshelf = require('bookshelf')(knex);
-
 
 server.register([
   {
@@ -25,11 +21,11 @@ server.register([
     options: {
       knex: knexfile['development'],
       plugins: ['registry'],
-      models: __dirname + '/models/withPlugin'
+      models: __dirname + '/models'
     }
   },
 ], function(err) {
-	if(err) {
+	if (err) {
 		throw err;
 	}
 });
